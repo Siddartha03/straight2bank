@@ -1,8 +1,8 @@
-import * as React from "react";
-import { StyleSheet, View, Text, Image, Pressable } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import { useNavigation } from "@react-navigation/native";
-import { Color, FontFamily } from "../GlobalStyles";
+import * as React from 'react';
+import {StyleSheet, View, Text, Image, Pressable} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {Color, FontFamily} from '../GlobalStyles';
 
 const IPhone14Pro14 = () => {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ const IPhone14Pro14 = () => {
         <LinearGradient
           style={styles.groupChild}
           locations={[0, 1]}
-          colors={["#0071eb", "#151f47"]}
+          colors={['#0071eb', '#151f47']}
           useAngle={true}
           angle={-88.2}
         />
@@ -21,24 +21,23 @@ const IPhone14Pro14 = () => {
         <View style={styles.groupItem} />
         <Pressable
           style={styles.iconIonicMdClose}
-          onPress={() => navigation.navigate("IPhone14Pro7")}
-        >
+          onPress={() => navigation.navigate('IPhone14Pro7')}>
           <Image
             style={styles.icon}
             resizeMode="cover"
-            source={require("../assets/icon-ionicmdclose.png")}
+            source={require('../assets/icon-ionicmdclose.png')}
           />
         </Pressable>
         <Text style={[styles.text, styles.textTypo]} />
         <Image
           style={styles.path11Icon}
           resizeMode="cover"
-          source={require("../assets/path-11.png")}
+          source={require('../assets/path-11.png')}
         />
         <Image
           style={styles.groupInner}
           resizeMode="cover"
-          source={require("../assets/group-19.png")}
+          source={require('../assets/group-19.png')}
         />
         <View style={styles.groupParent}>
           <View style={styles.homeParent}>
@@ -58,12 +57,12 @@ const IPhone14Pro14 = () => {
             <Image
               style={[styles.homeIcon, styles.iconPosition]}
               resizeMode="cover"
-              source={require("../assets/home.png")}
+              source={require('../assets/home.png')}
             />
             <Image
               style={styles.iconIonicIosCheckmarkCircl}
               resizeMode="cover"
-              source={require("../assets/icon-ionicioscheckmarkcircleoutline.png")}
+              source={require('../assets/icon-ionicioscheckmarkcircleoutline.png')}
             />
             <View style={styles.rectangleGroup}>
               <View
@@ -90,18 +89,18 @@ const IPhone14Pro14 = () => {
               <Image
                 style={[styles.path10Icon, styles.groupChildLayout]}
                 resizeMode="cover"
-                source={require("../assets/path-10.png")}
+                source={require('../assets/path-10.png')}
               />
             </View>
             <Image
               style={[styles.bankIcon, styles.iconPosition]}
               resizeMode="cover"
-              source={require("../assets/bank.png")}
+              source={require('../assets/bank.png')}
             />
             <Image
               style={[styles.groupIcon, styles.iconPosition]}
               resizeMode="cover"
-              source={require("../assets/group-15.png")}
+              source={require('../assets/group-15.png')}
             />
           </View>
           <View style={styles.groupContainer}>
@@ -114,13 +113,15 @@ const IPhone14Pro14 = () => {
           </View>
           <View style={styles.enterThisOtpToLoginToStrParent}>
             <Text
-              style={[styles.enterThisOtp, styles.text1Typo]}
-            >{`Enter this OTP to Login to
+              style={[
+                styles.enterThisOtp,
+                styles.text1Typo,
+              ]}>{`Enter this OTP to Login to
 Straight2Bank Web`}</Text>
             <Image
               style={styles.image6Icon}
               resizeMode="cover"
-              source={require("../assets/image-6.png")}
+              source={require('../assets/image-6.png')}
             />
           </View>
         </View>
@@ -131,21 +132,21 @@ Straight2Bank Web`}</Text>
 
 const styles = StyleSheet.create({
   textTypo: {
-    textAlign: "center",
+    textAlign: 'center',
     color: Color.black,
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
-    left: "50%",
-    position: "absolute",
+    fontWeight: '600',
+    left: '50%',
+    position: 'absolute',
   },
   homeTypo: {
     fontSize: 12,
     marginTop: 1.5,
-    top: "50%",
-    textAlign: "left",
+    top: '50%',
+    textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
-    position: "absolute",
+    fontWeight: '600',
+    position: 'absolute',
   },
   moreClr: {
     color: Color.black,
@@ -153,72 +154,72 @@ const styles = StyleSheet.create({
   },
   iconPosition: {
     top: 7,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChildLayout: {
     height: 7,
     width: 7,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChildBorder: {
     borderWidth: 1.2,
-    borderColor: "#000",
-    borderStyle: "solid",
+    borderColor: '#000',
+    borderStyle: 'solid',
     borderRadius: 2,
     width: 7,
     backgroundColor: Color.white,
   },
   text1Typo: {
     fontSize: 23,
-    textAlign: "center",
+    textAlign: 'center',
     color: Color.black,
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
-    position: "absolute",
+    fontWeight: '600',
+    position: 'absolute',
   },
   groupChild: {
     bottom: 42,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     left: 0,
     right: 0,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   s2bLogin: {
     marginLeft: -53.5,
     top: 83,
     fontSize: 27,
     color: Color.white,
-    textAlign: "left",
+    textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
-    left: "50%",
-    position: "absolute",
+    fontWeight: '600',
+    left: '50%',
+    position: 'absolute',
   },
   groupItem: {
     top: 170,
     bottom: 0,
     left: 0,
     right: 0,
-    position: "absolute",
+    position: 'absolute',
     backgroundColor: Color.white,
   },
   icon: {
-    height: "100%",
-    width: "100%",
+    height: '100%',
+    width: '100%',
   },
   iconIonicMdClose: {
     top: 102,
     right: 27,
     width: 15,
     height: 15,
-    position: "absolute",
+    position: 'absolute',
   },
   text: {
     marginTop: 119,
     marginLeft: 39.5,
     fontSize: 16,
-    top: "50%",
+    top: '50%',
   },
   path11Icon: {
     marginTop: -75,
@@ -226,18 +227,18 @@ const styles = StyleSheet.create({
     width: 0,
     height: 0,
     opacity: 0.23,
-    top: "50%",
-    left: "50%",
-    position: "absolute",
+    top: '50%',
+    left: '50%',
+    position: 'absolute',
   },
   groupInner: {
     marginTop: -167,
     marginLeft: -44.5,
     width: 89,
     height: 89,
-    top: "50%",
-    left: "50%",
-    position: "absolute",
+    top: '50%',
+    left: '50%',
+    position: 'absolute',
   },
   home: {
     left: 24,
@@ -245,15 +246,15 @@ const styles = StyleSheet.create({
   },
   accounts: {
     marginLeft: -99.5,
-    left: "50%",
+    left: '50%',
   },
   transactio: {
     marginLeft: -22.5,
-    left: "50%",
+    left: '50%',
   },
   approvals: {
     marginLeft: 66.5,
-    left: "50%",
+    left: '50%',
   },
   more: {
     right: 19,
@@ -268,8 +269,8 @@ const styles = StyleSheet.create({
     top: 8,
     width: 18,
     height: 18,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
+    position: 'absolute',
   },
   rectangleView: {
     left: 0,
@@ -292,22 +293,22 @@ const styles = StyleSheet.create({
     right: 25,
     width: 17,
     height: 16,
-    position: "absolute",
+    position: 'absolute',
   },
   bankIcon: {
     marginLeft: -83.5,
     width: 21,
     height: 21,
-    left: "50%",
+    left: '50%',
   },
   groupIcon: {
     marginLeft: 0.5,
     width: 23,
     height: 23,
-    left: "50%",
+    left: '50%',
   },
   homeParent: {
-    shadowColor: "rgba(0, 0, 0, 0.16)",
+    shadowColor: 'rgba(0, 0, 0, 0.16)',
     shadowOffset: {
       width: 12,
       height: 2,
@@ -319,14 +320,14 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    position: "absolute",
+    position: 'absolute',
     backgroundColor: Color.white,
   },
   text1: {
     marginTop: -14,
     left: 39,
     letterSpacing: 20,
-    top: "50%",
+    top: '50%',
   },
   wrapper: {
     backgroundColor: Color.royalblue_200,
@@ -334,7 +335,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   oneTimePassword: {
     marginLeft: -67,
@@ -347,8 +348,8 @@ const styles = StyleSheet.create({
     right: 33,
     left: 34,
     height: 91,
-    top: "50%",
-    position: "absolute",
+    top: '50%',
+    position: 'absolute',
   },
   enterThisOtp: {
     lineHeight: 33,
@@ -359,23 +360,23 @@ const styles = StyleSheet.create({
     marginLeft: -48,
     width: 95,
     height: 73,
-    left: "50%",
+    left: '50%',
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   enterThisOtpToLoginToStrParent: {
     right: 58,
     width: 276,
     height: 171,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   groupParent: {
     top: 231,
-    bottom: 0,
+    bottom: 50,
     left: 0,
     right: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   rectangleParent: {
     width: 393,
@@ -383,7 +384,7 @@ const styles = StyleSheet.create({
   },
   iphone14Pro14: {
     flex: 1,
-    width: "100%",
+    width: '100%',
     backgroundColor: Color.white,
   },
 });

@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { Color, FontFamily } from "../GlobalStyles";
+import * as React from 'react';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Color, FontFamily} from '../GlobalStyles';
 import {useNavigation} from '@react-navigation/native';
 
 const Splash3 = () => {
@@ -13,26 +13,27 @@ const Splash3 = () => {
           <Image
             style={[styles.path1Icon, styles.iconLayout]}
             resizeMode="cover"
-            source={require("../assets/path-12.png")}
+            source={require('../assets/path-12.png')}
           />
           <Image
             style={[styles.path2Icon, styles.iconLayout]}
             resizeMode="cover"
-            source={require("../assets/path-21.png")}
+            source={require('../assets/path-21.png')}
           />
           <Text
             style={[
               styles.straight2bank,
               styles.straight2bankFlexBox,
               styles.straight2bankTypo,
-            ]}
-          >
+            ]}>
             Straight2Bank
           </Text>
         </View>
         <Text
-        onPress={() => navigation.navigate('IPhone14Pro7')}
-        style={[styles.skip, styles.skipTypo]}>Skip</Text>
+          onPress={() => navigation.navigate('Home')}
+          style={[styles.skip, styles.skipTypo]}>
+          Skip
+        </Text>
         <View style={styles.rectangleParent}>
           <View style={[styles.groupChild, styles.groupChildPosition]} />
           <View style={styles.groupItem} />
@@ -40,28 +41,26 @@ const Splash3 = () => {
           <View style={[styles.rectangleView, styles.groupChild1Position]} />
           <View style={[styles.groupChild1, styles.groupChild1Position]} />
         </View>
-        <TouchableOpacity style={[styles.nextWrapper, styles.groupChildPosition]}
-        onPress={() => navigation.navigate('Splash4')}
-        >
+        <TouchableOpacity
+          style={[styles.nextWrapper, styles.groupChildPosition]}
+          onPress={() => navigation.navigate('Splash4')}>
           <Text style={[styles.next, styles.enjoyPosition]}>Next</Text>
         </TouchableOpacity>
         <View style={styles.groupWrapper}>
           <Image
             style={[styles.groupIcon, styles.groupIconPosition]}
             resizeMode="cover"
-            source={require("../assets/group-23.png")}
+            source={require('../assets/group-23.png')}
           />
         </View>
         <View
-          style={[styles.enjoyConvenienceSecurelyParent, styles.enjoyPosition]}
-        >
+          style={[styles.enjoyConvenienceSecurelyParent, styles.enjoyPosition]}>
           <Text
             style={[
               styles.enjoyConvenienceSecurely,
               styles.enjoyPosition,
               styles.skipTypo,
-            ]}
-          >
+            ]}>
             Enjoy convenience securely
           </Text>
           <Text
@@ -70,8 +69,7 @@ const Splash3 = () => {
               styles.groupIconPosition,
               styles.straight2bankFlexBox,
               styles.straight2bankTypo,
-            ]}
-          >
+            ]}>
             Manage transactions securely and easily with
           </Text>
           <Text style={[styles.ifApplicableFor, styles.straight2bankFlexBox]}>
@@ -88,26 +86,26 @@ const styles = StyleSheet.create({
     height: 22,
     width: 31,
     bottom: 4,
-    position: "absolute",
+    position: 'absolute',
   },
   straight2bankFlexBox: {
-    textAlign: "left",
+    textAlign: 'left',
     color: Color.dimgray_200,
   },
   straight2bankTypo: {
     fontFamily: FontFamily.muliSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
     color: Color.dimgray_200,
   },
   skipTypo: {
     fontFamily: FontFamily.muliBold,
-    fontWeight: "700",
-    textAlign: "left",
+    fontWeight: '700',
+    textAlign: 'left',
   },
   groupChildPosition: {
     backgroundColor: Color.royalblue_200,
     bottom: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChild1Position: {
     bottom: 1,
@@ -115,16 +113,16 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightsteelblue,
     borderRadius: 5,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   enjoyPosition: {
-    top: "50%",
-    position: "absolute",
+    top: '50%',
+    position: 'absolute',
   },
   groupIconPosition: {
     bottom: 0,
     left: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   path1Icon: {
     left: 0,
@@ -135,30 +133,30 @@ const styles = StyleSheet.create({
   straight2bank: {
     marginLeft: -98.87,
     fontSize: 29,
-    left: "50%",
+    left: '50%',
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   path1Parent: {
     right: 20,
     left: 20,
     height: 36,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   skip: {
     bottom: 15,
     left: 24,
     color: Color.royalblue_200,
     fontSize: 15,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChild: {
     width: 29,
     borderRadius: 5,
     backgroundColor: Color.royalblue_200,
     marginLeft: -14,
-    left: "50%",
+    left: '50%',
     top: 0,
   },
   groupItem: {
@@ -168,7 +166,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     bottom: 0,
     left: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   groupInner: {
     marginLeft: -40,
@@ -177,12 +175,12 @@ const styles = StyleSheet.create({
     top: 1,
     borderRadius: 5,
     bottom: 0,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
+    position: 'absolute',
   },
   rectangleView: {
     marginLeft: 25,
-    left: "50%",
+    left: '50%',
   },
   groupChild1: {
     right: 0,
@@ -192,19 +190,19 @@ const styles = StyleSheet.create({
     bottom: 81,
     width: 130,
     height: 8,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
+    position: 'absolute',
   },
   next: {
     marginTop: -10.5,
     fontSize: 13,
     color: Color.white,
     marginLeft: -14,
-    top: "50%",
-    textAlign: "left",
+    top: '50%',
+    textAlign: 'left',
     fontFamily: FontFamily.muliSemibold,
-    fontWeight: "600",
-    left: "50%",
+    fontWeight: '600',
+    left: '50%',
   },
   nextWrapper: {
     right: 12,
@@ -213,9 +211,9 @@ const styles = StyleSheet.create({
     height: 49,
   },
   groupIcon: {
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
+    maxWidth: '100%',
+    overflow: 'hidden',
+    maxHeight: '100%',
     right: 0,
     top: 0,
   },
@@ -224,7 +222,7 @@ const styles = StyleSheet.create({
     height: 337,
     right: 0,
     left: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   enjoyConvenienceSecurely: {
     marginTop: -13.5,
@@ -240,9 +238,9 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.aileronRegular,
     opacity: 0.81,
     fontSize: 15,
-    left: "50%",
+    left: '50%',
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   enjoyConvenienceSecurelyParent: {
     marginTop: 103.5,
@@ -257,11 +255,11 @@ const styles = StyleSheet.create({
   splash3: {
     backgroundColor: Color.white,
     flex: 1,
-    width: "100%",
+    width: '100%',
     paddingLeft: 21,
     paddingTop: 61,
     paddingRight: 20,
-    alignItems: "center",
+    alignItems: 'center',
   },
 });
 

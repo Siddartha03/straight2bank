@@ -15,13 +15,13 @@ const IPhone14Pro7 = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.iphone14Pro7}>
+    <View style={styles.home}>
       <ImageBackground
         style={styles.groupParent}
         resizeMode="cover"
         source={require('../assets/mesmerizingshotfamoushistorictajmahalagraindia.png')}>
         <View
-          style={[styles.welcomeBackAzarAliWrapper, styles.wrapperPosition]}>
+          style={[styles.welcomeBackAzarAliWrapper, styles.groupInnerPosition]}>
           <Text
             style={[
               styles.welcomeBackAzar,
@@ -31,12 +31,8 @@ const IPhone14Pro7 = () => {
             Welcome back, Azar Ali
           </Text>
         </View>
-        <View
-          style={[
-            styles.cargilIndiaPrviateLimitedWrapper,
-            styles.wrapperPosition,
-          ]}>
-          <Text style={[styles.cargilIndiaPrviate, styles.changeLoginIdTypo]}>
+        <View style={styles.cargilIndiaPrviateLimitedWrapper}>
+          <Text style={styles.cargilIndiaPrviate}>
             CARGIL INDIA PRVIATE LIMITED
           </Text>
         </View>
@@ -61,33 +57,33 @@ const IPhone14Pro7 = () => {
           <View style={[styles.groupChild, styles.groupChildPosition]} />
         </View>
         <View style={styles.changeLoginIdParent}>
-          <Text style={[styles.changeLoginId, styles.changeLoginIdTypo]}>
-            Change Login ID
-          </Text>
+          <Text style={styles.changeLoginId}>Change Login ID</Text>
           <Image
-            style={styles.groupItem}
+            style={styles.path12Icon}
             resizeMode="cover"
-            source={require('../assets/line-2.png')}
+            source={require('../assets/path-12.png')}
           />
         </View>
         <TouchableOpacity
           style={[styles.imagesParent, styles.parentLayout]}
           onPress={() => navigation.navigate('IPhone14Pro9')}>
           <Image
-            style={[styles.imagesIcon, styles.imagesIconPosition]}
+            style={[styles.imagesIcon, styles.groupItemPosition]}
             resizeMode="cover"
             source={require('../assets/images.png')}
           />
           <Text style={[styles.login, styles.loginTypo]}>Login</Text>
         </TouchableOpacity>
-        <View style={[styles.accountsParent, styles.parentLayout]}>
+        <TouchableOpacity
+          style={[styles.accountsParent, styles.parentLayout]}
+          onPress={() => navigation.navigate('Accounts')}>
           <Text style={[styles.accounts, styles.loginTypo]}>Accounts</Text>
           <Image
-            style={[styles.groupInner, styles.imagesIconPosition]}
+            style={[styles.groupItem, styles.groupItemPosition]}
             resizeMode="cover"
             source={require('../assets/group-3.png')}
           />
-        </View>
+        </TouchableOpacity>
         <TouchableOpacity
           style={[styles.digitalTokenParent, styles.parentLayout]}
           onPress={() => navigation.navigate('IPhone14Pro13')}>
@@ -95,7 +91,7 @@ const IPhone14Pro7 = () => {
             Digital Token
           </Text>
           <Image
-            style={styles.groupIcon}
+            style={[styles.groupInner, styles.groupInnerPosition]}
             resizeMode="cover"
             source={require('../assets/group-5.png')}
           />
@@ -108,7 +104,7 @@ const IPhone14Pro7 = () => {
           </Text>
           <Pressable
             style={[styles.linePressable, styles.groupChildPosition]}
-            // onPress={() => navigation.navigate("IPhone14Pro8")}
+            // onPress={() => navigation.navigate('HelpSupport')}
           />
         </TouchableOpacity>
       </ImageBackground>
@@ -117,8 +113,8 @@ const IPhone14Pro7 = () => {
 };
 
 const styles = StyleSheet.create({
-  wrapperPosition: {
-    left: 34,
+  groupInnerPosition: {
+    height: 24,
     top: '50%',
     position: 'absolute',
   },
@@ -127,25 +123,16 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   straight2bankTypo: {
+    color: Color.white,
     fontWeight: '600',
     top: 0,
     textAlign: 'left',
-    color: Color.white,
-  },
-  changeLoginIdTypo: {
-    fontFamily: FontFamily.mulishBold,
-    fontWeight: '700',
-    fontSize: 16,
-    textAlign: 'left',
-    left: 0,
-    top: 0,
-    position: 'absolute',
   },
   carlTypo: {
     fontFamily: FontFamily.segoeUIBold,
     marginTop: -8.25,
-    fontWeight: '700',
     fontSize: 16,
+    fontWeight: '700',
     textAlign: 'left',
     color: Color.white,
     top: '50%',
@@ -153,8 +140,8 @@ const styles = StyleSheet.create({
   },
   userIdTypo: {
     opacity: 0.86,
-    fontSize: 14,
     fontFamily: FontFamily.segoeUIRegular,
+    fontSize: 14,
     textAlign: 'left',
     color: Color.white,
     top: 0,
@@ -174,7 +161,7 @@ const styles = StyleSheet.create({
     top: '50%',
     position: 'absolute',
   },
-  imagesIconPosition: {
+  groupItemPosition: {
     width: 25,
     left: '50%',
     top: '50%',
@@ -191,47 +178,52 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   welcomeBackAzar: {
-    fontSize: 21,
+    fontSize: 19,
     fontFamily: FontFamily.mulishSemibold,
-    color: Color.white,
     left: 0,
   },
   welcomeBackAzarAliWrapper: {
-    marginTop: -134.46,
-    width: 234,
-    height: 26,
+    marginTop: -132.46,
+    width: 212,
+    left: 34,
   },
   cargilIndiaPrviate: {
+    fontFamily: FontFamily.mulishBold,
+    fontWeight: '700',
+    fontSize: 14,
+    textAlign: 'left',
     color: Color.white,
+    left: 0,
+    top: 0,
+    position: 'absolute',
   },
   cargilIndiaPrviateLimitedWrapper: {
-    marginTop: -80.46,
-    width: 249,
-    height: 20,
+    marginTop: -78.46,
+    width: 218,
+    height: 18,
+    left: 34,
+    top: '50%',
+    position: 'absolute',
   },
   straight2bank: {
-    marginLeft: -75,
-    fontSize: 24,
+    fontSize: 22,
     fontFamily: FontFamily.muliSemibold,
-    left: '50%',
-    bottom: 40,
-    color: Color.white,
+    left: 14,
   },
   makingComplexWork: {
-    fontSize: 18,
+    fontSize: 13,
     fontFamily: FontFamily.segoeUIRegular,
     bottom: 0,
-    marginTop: 40,
     textAlign: 'left',
     color: Color.white,
     left: 0,
     position: 'absolute',
   },
   straight2bankParent: {
-    marginLeft: -139.5,
-    top: 79,
-    width: 266,
-    height: 63,
+    marginLeft: -95.5,
+    top: 92,
+    width: 192,
+    height: 58,
     left: '50%',
     position: 'absolute',
   },
@@ -265,8 +257,15 @@ const styles = StyleSheet.create({
   },
   changeLoginId: {
     color: '#73b6ff',
+    fontSize: 16,
+    fontFamily: FontFamily.mulishBold,
+    fontWeight: '700',
+    textAlign: 'left',
+    left: 0,
+    top: 0,
+    position: 'absolute',
   },
-  groupItem: {
+  path12Icon: {
     right: 1,
     bottom: -1,
     maxWidth: '100%',
@@ -299,7 +298,7 @@ const styles = StyleSheet.create({
     marginLeft: -24,
     left: '50%',
   },
-  groupInner: {
+  groupItem: {
     marginTop: -25.3,
     marginLeft: -11.27,
     height: 22,
@@ -310,23 +309,20 @@ const styles = StyleSheet.create({
   digitalToken: {
     left: 14,
   },
-  groupIcon: {
+  groupInner: {
     marginTop: -22.4,
     marginLeft: -9,
     width: 18,
-    height: 24,
     left: '50%',
-    top: '50%',
-    position: 'absolute',
   },
   digitalTokenParent: {
     marginLeft: -49.5,
     left: '50%',
   },
   howCanWe: {
-    marginTop: -12.5,
-    marginLeft: -106,
-    fontSize: 20,
+    marginTop: -11.5,
+    marginLeft: -95,
+    fontSize: 18,
     fontWeight: '500',
     fontFamily: FontFamily.mulishMedium,
     color: Color.black,
@@ -356,7 +352,7 @@ const styles = StyleSheet.create({
     width: 399,
     height: 740,
   },
-  iphone14Pro7: {
+  home: {
     flex: 1,
     width: '100%',
     backgroundColor: Color.white,

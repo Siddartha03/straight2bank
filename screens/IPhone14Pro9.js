@@ -1,5 +1,5 @@
-import * as React from "react";
-import { useState } from "react";
+import * as React from 'react';
+import {useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -7,11 +7,11 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
-} from "react-native";
-import { Input as RNKTextInput } from "@ui-kitten/components";
-import { useNavigation } from "@react-navigation/native";
-import { FontFamily, Color } from "../GlobalStyles";
+  TouchableOpacity,
+} from 'react-native';
+import {Input as RNKTextInput} from '@ui-kitten/components';
+import {useNavigation} from '@react-navigation/native';
+import {FontFamily, Color} from '../GlobalStyles';
 
 const IPhone14Pro9 = () => {
   const [rectangleTextInput, setRectangleTextInput] = useState();
@@ -23,12 +23,11 @@ const IPhone14Pro9 = () => {
         <View style={styles.iconIonicIosArrowForwardParent}>
           <Pressable
             style={[styles.iconIonicIosArrowForward, styles.forgotPinPosition]}
-            onPress={() => navigation.navigate("IPhone14Pro7")}
-          >
+            onPress={() => navigation.navigate('IPhone14Pro7')}>
             <Image
               style={styles.icon}
               resizeMode="cover"
-              source={require("../assets/icon-ioniciosarrowforward2.png")}
+              source={require('../assets/icon-ioniciosarrowforward2.png')}
             />
           </Pressable>
           <Text
@@ -36,16 +35,14 @@ const IPhone14Pro9 = () => {
               styles.loginViaPin,
               styles.loginTypo,
               styles.loginViaPinPosition,
-            ]}
-          >
+            ]}>
             Login via PIN
           </Text>
-          <TouchableOpacity style={[styles.loginWrapper, styles.loginWrapperPosition]}
-          onPress={() => navigation.navigate('IPhone14Pro10')}
-          >
+          <TouchableOpacity
+            style={[styles.loginWrapper, styles.loginWrapperPosition]}
+            onPress={() => navigation.navigate('Home')}>
             <Text
-              style={[styles.login, styles.loginPosition, styles.loginTypo]}
-            >
+              style={[styles.login, styles.loginPosition, styles.loginTypo]}>
               Login
             </Text>
           </TouchableOpacity>
@@ -102,21 +99,20 @@ const IPhone14Pro9 = () => {
                 styles.forgotPin,
                 styles.loginTypo,
                 styles.forgotPinPosition,
-              ]}
-            >
+              ]}>
               Forgot PIN?
             </Text>
             <Image
               style={[styles.iconMetroQuestion, styles.loginViaPinPosition]}
               resizeMode="cover"
-              source={require("../assets/icon-metroquestion.png")}
+              source={require('../assets/icon-metroquestion.png')}
             />
           </View>
           <View style={styles.image1Wrapper}>
             <Image
               style={[styles.image1Icon, styles.loginPosition]}
               resizeMode="cover"
-              source={require("../assets/image-1.png")}
+              source={require('../assets/image-1.png')}
             />
           </View>
         </View>
@@ -128,56 +124,56 @@ const IPhone14Pro9 = () => {
 const styles = StyleSheet.create({
   forgotPinPosition: {
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   loginTypo: {
-    textAlign: "left",
+    textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
     fontSize: 20,
   },
   loginViaPinPosition: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
   },
   loginWrapperPosition: {
     height: 52,
     left: 1,
-    position: "absolute",
+    position: 'absolute',
   },
   loginPosition: {
     marginTop: -12,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    top: '50%',
+    position: 'absolute',
   },
   groupChildBorder1: {
     opacity: 0.57,
     width: 33,
     borderWidth: 1,
-    borderColor: "#707070",
-    borderStyle: "solid",
+    borderColor: '#707070',
+    borderStyle: 'solid',
     borderRadius: 3,
     bottom: 0,
     top: 0,
-    position: "absolute",
-    textAlign: 'center'
+    position: 'absolute',
+    textAlign: 'center',
   },
   groupChildBorder: {
     width: 34,
     opacity: 0.57,
     borderWidth: 1,
-    borderColor: "#707070",
-    borderStyle: "solid",
+    borderColor: '#707070',
+    borderStyle: 'solid',
     borderRadius: 3,
     bottom: 0,
     top: 0,
-    position: "absolute",
-    textAlign: 'center'
+    position: 'absolute',
+    textAlign: 'center',
   },
   icon: {
-    height: "100%",
-    width: "100%",
+    height: '100%',
+    width: '100%',
   },
   iconIonicIosArrowForward: {
     left: 4,
@@ -187,13 +183,13 @@ const styles = StyleSheet.create({
   loginViaPin: {
     marginTop: -96.1,
     color: Color.black,
-    top: "50%",
+    top: '50%',
     left: 0,
   },
   login: {
     marginLeft: -25.5,
     color: Color.white,
-    left: "50%",
+    left: '50%',
   },
   loginWrapper: {
     backgroundColor: Color.royalblue_100,
@@ -208,42 +204,42 @@ const styles = StyleSheet.create({
   },
   groupItem: {
     marginLeft: 13.5,
-    left: "50%",
+    left: '50%',
   },
   groupInner: {
     left: 41,
   },
   rectangleTextinput: {
     marginLeft: 54.5,
-    left: "50%",
+    left: '50%',
   },
   groupChild1: {
     marginLeft: -88.5,
-    left: "50%",
+    left: '50%',
   },
   groupChild2: {
     right: 42,
   },
   groupChild3: {
     marginLeft: -47.5,
-    left: "50%",
+    left: '50%',
   },
   groupChild4: {
     right: 0,
   },
   rectangleParent: {
     marginTop: -40.1,
-    top: "50%",
+    top: '50%',
     right: 0,
   },
   forgotPin: {
     right: -1,
-    color: "#0561c6",
+    color: '#0561c6',
   },
   iconMetroQuestion: {
     top: 3,
     bottom: 3,
-    maxHeight: "100%",
+    maxHeight: '100%',
     width: 19,
     left: 0,
   },
@@ -252,32 +248,32 @@ const styles = StyleSheet.create({
     width: 137,
     height: 25,
     left: 1,
-    top: "50%",
-    position: "absolute",
+    top: '50%',
+    position: 'absolute',
   },
   image1Icon: {
     marginLeft: -12.03,
     width: 24,
     height: 26,
-    left: "50%",
+    left: '50%',
   },
   image1Wrapper: {
     right: 4,
     width: 59,
     borderWidth: 1,
-    borderColor: "#707070",
-    borderStyle: "solid",
+    borderColor: '#707070',
+    borderStyle: 'solid',
     height: 52,
     borderRadius: 3,
     bottom: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   iconIonicIosArrowForwardParent: {
     left: 0,
     bottom: 0,
     right: 0,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   iphone14Pro9Inner: {
     width: 346,
@@ -288,7 +284,7 @@ const styles = StyleSheet.create({
     paddingLeft: 28,
     paddingTop: 31,
     paddingRight: 19,
-    width: "100%",
+    width: '100%',
     backgroundColor: Color.white,
   },
 });

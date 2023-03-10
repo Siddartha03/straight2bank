@@ -1,8 +1,16 @@
-import * as React from "react";
-import { StyleSheet, View, Text, Pressable, Image, Dimensions } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import { useNavigation } from "@react-navigation/native";
-import { Color, FontFamily } from "../GlobalStyles";
+import * as React from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Pressable,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {Color, FontFamily} from '../GlobalStyles';
 
 const IPhone14Pro11 = () => {
   const navigation = useNavigation();
@@ -13,7 +21,7 @@ const IPhone14Pro11 = () => {
         <LinearGradient
           style={styles.groupChild}
           locations={[0, 1]}
-          colors={["#0071eb", "#151f47"]}
+          colors={['#0071eb', '#151f47']}
           useAngle={true}
           angle={-88.2}
         />
@@ -28,23 +36,21 @@ const IPhone14Pro11 = () => {
           <View style={styles.tasksParent}>
             <Pressable
               style={styles.tasks}
-              onPress={() => navigation.navigate("IPhone14Pro10")}
-            >
+              onPress={() => navigation.navigate('Home')}>
               <Text style={styles.tasks1}>Tasks</Text>
             </Pressable>
             <Pressable
               style={[styles.iconAwesomeCheckParent, styles.groupChild1Border]}
-              onPress={() => navigation.navigate("IPhone14Pro10")}
-            >
+              onPress={() => navigation.navigate('Home')}>
               <Image
                 style={[styles.iconAwesomeCheck, styles.iconPosition1]}
                 resizeMode="cover"
-                source={require("../assets/icon-awesomecheck.png")}
+                source={require('../assets/icon-awesomecheck.png')}
               />
               <Image
                 style={[styles.iconAwesomeCheck1, styles.iconPosition1]}
                 resizeMode="cover"
-                source={require("../assets/icon-awesomecheck.png")}
+                source={require('../assets/icon-awesomecheck.png')}
               />
               <View style={[styles.groupInner, styles.lineViewPosition]} />
               <View style={[styles.lineView, styles.lineViewPosition]} />
@@ -60,7 +66,7 @@ const IPhone14Pro11 = () => {
                   styles.emailIconLayout1,
                 ]}
                 resizeMode="cover"
-                source={require("../assets/email.png")}
+                source={require('../assets/email.png')}
               />
               <Image
                 style={[
@@ -69,7 +75,7 @@ const IPhone14Pro11 = () => {
                   styles.emailIconLayout1,
                 ]}
                 resizeMode="cover"
-                source={require("../assets/email.png")}
+                source={require('../assets/email.png')}
               />
             </View>
           </View>
@@ -80,7 +86,7 @@ const IPhone14Pro11 = () => {
           <Image
             style={[styles.userIcon, styles.userIconLayout]}
             resizeMode="cover"
-            source={require("../assets/user1.png")}
+            source={require('../assets/user1.png')}
           />
           <Image
             style={[
@@ -89,103 +95,119 @@ const IPhone14Pro11 = () => {
               styles.emailIconLayout,
             ]}
             resizeMode="cover"
-            source={require("../assets/building1.png")}
+            source={require('../assets/building1.png')}
           />
           <View style={[styles.groupChild1, styles.groupChild1Border]} />
         </View>
         <View style={[styles.rectangleView, styles.groupParentShadowBox]}>
-        <Text style={[styles.home, styles.homeTypo]}>Home</Text>
-        <Text style={[styles.accounts, styles.moreClr, styles.homeTypo]}>
-          Accounts
-        </Text>
-        <Text style={[styles.transactio, styles.moreClr, styles.homeTypo]}>
-          Transactio..
-        </Text>
-        <Text style={[styles.approvals, styles.moreClr, styles.homeTypo]}>
-          Approvals
-        </Text>
-        <Text style={[styles.more, styles.moreClr, styles.homeTypo]}>More</Text>
-        <Image
-          style={[styles.homeIcon, styles.homeIconLayout]}
-          resizeMode="cover"
-          source={require("../assets/home.png")}
-        />
-        <Image
-          style={[styles.iconIonicIosCheckmarkCircl, styles.iconPosition]}
-          resizeMode="cover"
-          source={require("../assets/icon-ionicioscheckmarkcircleoutline1.png")}
-        />
-        <View style={[styles.rectangleGroup, styles.userIconLayout]}>
-          <View
-            style={[
-              styles.groupChild2,
-              styles.groupChildLayout,
-              styles.groupChildBorder,
-            ]}
-          />
-          <View
-            style={[
-              styles.groupChild3,
-              styles.groupChildLayout,
-              styles.groupChildBorder,
-            ]}
-          />
-          <View
-            style={[
-              styles.groupChild4,
-              styles.groupChildLayout,
-              styles.groupChildBorder,
-            ]}
-          />
-          <Image
-            style={[styles.path10Icon, styles.groupChildLayout]}
-            resizeMode="cover"
-            source={require("../assets/path-10.png")}
-          />
-        </View>
-        <Image
-          style={styles.bankIcon}
-          resizeMode="cover"
-          source={require("../assets/bank.png")}
-        />
-        <Image
-          style={styles.groupIcon}
-          resizeMode="cover"
-          source={require("../assets/group-15.png")}
-        />
+          <Text style={[styles.home, styles.homeTypo]}>Home</Text>
+          <Text style={[styles.accounts, styles.moreClr, styles.homeTypo]}>
+            Accounts
+          </Text>
+          <Text style={[styles.transactio, styles.moreClr, styles.homeTypo]}>
+            Transactio..
+          </Text>
+          <Text style={[styles.approvals, styles.moreClr, styles.homeTypo]}>
+            Approvals
+          </Text>
+          <Text style={[styles.more, styles.moreClr, styles.homeTypo]}>
+            More
+          </Text>
+          <Pressable onPress={() => navigation.navigate('Home')}>
+            <Image
+              style={[
+                styles.homeIcon,
+                styles.homeIconLayout,
+                styles.iconLayout1,
+              ]}
+              resizeMode="cover"
+              source={require('../assets/home.png')}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate('More')}>
+            <Image
+              style={[styles.iconIonicIosCheckmarkCircl, styles.iconPosition]}
+              resizeMode="cover"
+              source={require('../assets/icon-ionicioscheckmarkcircleoutline1.png')}
+            />
+          </Pressable>
+          <Pressable
+            style={[styles.rectangleGroup, styles.userIconLayout]}
+            onPress={() => navigation.navigate('Approvals')}>
+            <View
+              style={[
+                styles.groupChild2,
+                styles.groupChildLayout,
+                styles.groupChildBorder,
+              ]}
+            />
+            <View
+              style={[
+                styles.groupChild3,
+                styles.groupChildLayout,
+                styles.groupChildBorder,
+              ]}
+            />
+            <View
+              style={[
+                styles.groupChild4,
+                styles.groupChildLayout,
+                styles.groupChildBorder,
+              ]}
+            />
+            <Image
+              style={[styles.path10Icon, styles.groupChildLayout]}
+              resizeMode="cover"
+              source={require('../assets/path-10.png')}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate('Accounts')}>
+            <Image
+              style={styles.bankIcon}
+              resizeMode="cover"
+              source={require('../assets/bank.png')}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate('Transactions')}>
+            <Image
+              style={styles.groupIcon}
+              resizeMode="cover"
+              source={require('../assets/group-15.png')}
+            />
+          </Pressable>
         </View>
         <View style={styles.logoutParent}>
           <Pressable
             style={styles.logout}
-            onPress={() => navigation.navigate("IPhone14Pro12")}
-          >
+            onPress={() => navigation.navigate('IPhone14Pro12')}>
             <Text style={[styles.logout1, styles.azarAliTypo]}>Logout</Text>
           </Pressable>
           <Image
             style={[styles.closeIcon, styles.closeIconPosition]}
             resizeMode="cover"
-            source={require("../assets/close.png")}
+            source={require('../assets/close.png')}
           />
         </View>
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-31.png")}
+          source={require('../assets/ellipse-31.png')}
         />
         <View style={styles.inboxComingSoonParent}>
           <Text
-            style={[styles.inboxComingSoon, styles.moreClr, styles.inboxTypo]}
-          >
+            style={[styles.inboxComingSoon, styles.moreClr, styles.inboxTypo]}>
             Inbox Coming Soon!
           </Text>
           <Text
-            style={[styles.wereWorkingHard, styles.moreClr]}
-          >{`We're working hard on the inbox Section. Feel
+            style={[
+              styles.wereWorkingHard,
+              styles.moreClr,
+            ]}>{`We're working hard on the inbox Section. Feel
 free to leae any suggestions here.`}</Text>
           <Image
             style={styles.whatsappImage20230309At1}
             resizeMode="cover"
-            source={require("../assets/whatsapp-image-20230309-at-190921.png")}
+            source={require('../assets/whatsapp-image-20230309-at-190921.png')}
           />
         </View>
       </View>
@@ -195,11 +217,11 @@ free to leae any suggestions here.`}</Text>
 
 const styles = StyleSheet.create({
   azarAliTypo: {
-    textAlign: "left",
+    textAlign: 'left',
     fontSize: 18,
     color: Color.white,
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   groupParentShadowBox: {
     shadowOpacity: 1,
@@ -209,149 +231,149 @@ const styles = StyleSheet.create({
       width: 0,
       height: 3,
     },
-    shadowColor: "rgba(0, 0, 0, 0.16)",
-    position: "absolute",
+    shadowColor: 'rgba(0, 0, 0, 0.16)',
+    position: 'absolute',
     backgroundColor: Color.white,
   },
   groupChild1Border: {
-    borderColor: "#007afd",
-    borderStyle: "solid",
-    position: "absolute",
+    borderColor: '#007afd',
+    borderStyle: 'solid',
+    position: 'absolute',
   },
   iconPosition1: {
     height: 5,
     width: 7,
     marginLeft: -8.27,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    top: '50%',
+    position: 'absolute',
   },
   lineViewPosition: {
     height: 3,
     width: 8,
     borderTopWidth: 1.5,
     marginLeft: 0.5,
-    left: "50%",
-    borderColor: "#007afd",
-    borderStyle: "solid",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    borderColor: '#007afd',
+    borderStyle: 'solid',
+    top: '50%',
+    position: 'absolute',
   },
   inboxTypo: {
     fontFamily: FontFamily.mulishBold,
-    fontWeight: "700",
-    left: "50%",
+    fontWeight: '700',
+    left: '50%',
     fontSize: 20,
-    top: "50%",
-    textAlign: "left",
+    top: '50%',
+    textAlign: 'left',
   },
   closeIconPosition: {
     marginTop: -13,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    top: '50%',
+    position: 'absolute',
   },
   emailIconLayout: {
-    maxHeight: "100%",
+    maxHeight: '100%',
     top: 0,
   },
   emailIconLayout1: {
-    overflow: "hidden",
-    maxWidth: "100%",
-    maxHeight: "100%",
+    overflow: 'hidden',
+    maxWidth: '100%',
+    maxHeight: '100%',
     bottom: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   homeIconLayout: {
     height: 20,
-    position: "absolute",
+    position: 'absolute',
   },
   cargilTypo: {
     fontSize: 16,
     fontFamily: FontFamily.mulishBold,
-    fontWeight: "700",
-    textAlign: "left",
+    fontWeight: '700',
+    textAlign: 'left',
     color: Color.white,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   userIconLayout: {
     height: 16,
-    position: "absolute",
+    position: 'absolute',
   },
   iconPosition: {
     width: 18,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
+    position: 'absolute',
   },
   homeTypo: {
     fontSize: 12,
     bottom: 16,
-    textAlign: "left",
+    textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   moreClr: {
     color: Color.black,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChildLayout: {
     height: 7,
     width: 7,
-    position: "absolute",
+    position: 'absolute',
   },
   groupChildBorder: {
     borderWidth: 1.2,
-    borderColor: "#000",
+    borderColor: '#000',
     height: 7,
-    borderStyle: "solid",
+    borderStyle: 'solid',
     borderRadius: 2,
     backgroundColor: Color.white,
   },
   groupChild: {
     bottom: 42,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     left: 0,
     right: 0,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   welcomeBack: {
     left: 0,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   azarAli: {
     bottom: 0,
     left: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   welcomeBackParent: {
     top: 52,
     left: 33,
     width: 128,
     height: 54,
-    position: "absolute",
+    position: 'absolute',
   },
   groupItem: {
     top: 232,
     bottom: 0,
     left: 0,
     right: 0,
-    position: "absolute",
+    position: 'absolute',
     backgroundColor: Color.white,
   },
   tasks1: {
     color: Color.royalblue_100,
     fontSize: 20,
-    textAlign: "left",
+    textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   tasks: {
     right: -1,
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   iconAwesomeCheck: {
     marginTop: -6.71,
@@ -369,7 +391,7 @@ const styles = StyleSheet.create({
     borderWidth: 2.5,
     width: 25,
     borderRadius: 2,
-    borderStyle: "solid",
+    borderStyle: 'solid',
     top: 1,
     bottom: 0,
     left: 0,
@@ -379,16 +401,16 @@ const styles = StyleSheet.create({
     left: 46,
     width: 95,
     height: 27,
-    top: "50%",
-    position: "absolute",
+    top: '50%',
+    position: 'absolute',
   },
   inbox: {
     marginTop: -14,
     marginLeft: -5.5,
     color: Color.white,
     fontFamily: FontFamily.mulishBold,
-    fontWeight: "700",
-    position: "absolute",
+    fontWeight: '700',
+    position: 'absolute',
   },
   emailIcon: {
     left: 1,
@@ -410,7 +432,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     backgroundColor: Color.royalblue_200,
     width: 169,
-    position: "absolute",
+    position: 'absolute',
   },
   groupParent: {
     marginTop: -203,
@@ -418,7 +440,7 @@ const styles = StyleSheet.create({
     left: 20,
     borderRadius: 37,
     height: 71,
-    top: "50%",
+    top: '50%',
   },
   cargil: {
     left: 22,
@@ -442,13 +464,13 @@ const styles = StyleSheet.create({
     bottom: 3,
     borderRightWidth: 2,
     width: 4,
-    left: "50%",
+    left: '50%',
   },
   cargilParent: {
     marginTop: -252,
     left: 34,
     width: 220,
-    top: "50%",
+    top: '50%',
   },
   rectangleView: {
     height: 65,
@@ -459,31 +481,31 @@ const styles = StyleSheet.create({
   home: {
     left: 24,
     color: Color.royalblue_100,
-    position: "absolute",
+    position: 'absolute',
   },
   accounts: {
     marginLeft: -99.5,
-    left: "50%",
+    left: '50%',
   },
   transactio: {
     marginLeft: -22.5,
-    left: "50%",
+    left: '50%',
   },
   approvals: {
     marginLeft: 66.5,
-    left: "50%",
+    left: '50%',
   },
   more: {
     right: 19,
   },
   homeIcon: {
-    bottom: 38,
     left: 30,
-    width: 20,
+    top: 8,
   },
   iconIonicIosCheckmarkCircl: {
     marginLeft: 87.5,
-    bottom: 39,
+    bottom: 0,
+    top: 10,
     height: 18,
   },
   groupChild2: {
@@ -509,28 +531,26 @@ const styles = StyleSheet.create({
   },
   bankIcon: {
     marginLeft: -83.5,
-    bottom: 37,
     width: 21,
     height: 21,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
+    top: 6,
   },
   groupIcon: {
-    bottom: 35,
+    bottom: 14,
+    right: 4,
     width: 23,
     height: 23,
-    marginLeft: 0.5,
-    left: "50%",
-    position: "absolute",
+    left: '50%',
   },
   logout1: {
     marginTop: -11,
     marginLeft: -11.5,
   },
   logout: {
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    top: '50%',
+    position: 'absolute',
   },
   closeIcon: {
     marginLeft: -46.5,
@@ -545,16 +565,16 @@ const styles = StyleSheet.create({
     width: 139,
     height: 50,
     right: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   ellipseIcon: {
     marginTop: -38,
     marginLeft: -41.5,
     width: 79,
     height: 79,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+    left: '50%',
+    top: '50%',
+    position: 'absolute',
   },
   inboxComingSoon: {
     marginTop: 25.5,
@@ -562,11 +582,11 @@ const styles = StyleSheet.create({
   },
   wereWorkingHard: {
     fontSize: 15,
-    textAlign: "center",
+    textAlign: 'center',
     opacity: 0.6,
     bottom: 0,
     fontFamily: FontFamily.mulishSemibold,
-    fontWeight: "600",
+    fontWeight: '600',
     color: Color.black,
     left: 0,
   },
@@ -574,17 +594,17 @@ const styles = StyleSheet.create({
     marginLeft: -45,
     width: 89,
     height: 80,
-    left: "50%",
+    left: '50%',
     top: 0,
-    position: "absolute",
+    position: 'absolute',
   },
   inboxComingSoonParent: {
     marginTop: -35,
     right: 35,
     left: 36,
     height: 227,
-    top: "50%",
-    position: "absolute",
+    top: '50%',
+    position: 'absolute',
   },
   rectangleParent: {
     width: 393,
@@ -592,8 +612,12 @@ const styles = StyleSheet.create({
   },
   iphone14Pro11: {
     flex: 1,
-    width: "100%",
+    width: '100%',
     backgroundColor: Color.white,
+  },
+  iconLayout1: {
+    overflow: 'hidden',
+    maxWidth: '100%',
   },
 });
 
