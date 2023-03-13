@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Pressable,
-  Image,
-  Dimensions,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, View, Text, Pressable, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 import {Color, FontFamily} from '../GlobalStyles';
@@ -100,17 +92,29 @@ const IPhone14Pro11 = () => {
           <View style={[styles.groupChild1, styles.groupChild1Border]} />
         </View>
         <View style={[styles.rectangleView, styles.groupParentShadowBox]}>
-          <Text style={[styles.home, styles.homeTypo]}>Home</Text>
-          <Text style={[styles.accounts, styles.moreClr, styles.homeTypo]}>
+          <Text
+            onPress={() => navigation.navigate('Home')}
+            style={[styles.home, styles.homeTypo]}>
+            Home
+          </Text>
+          <Text
+            onPress={() => navigation.navigate('Accounts')}
+            style={[styles.accounts, styles.moreClr, styles.homeTypo]}>
             Accounts
           </Text>
-          <Text style={[styles.transactio, styles.moreClr, styles.homeTypo]}>
+          <Text
+            onPress={() => navigation.navigate('Transactions')}
+            style={[styles.transactio, styles.moreClr, styles.homeTypo]}>
             Transactio..
           </Text>
-          <Text style={[styles.approvals, styles.moreClr, styles.homeTypo]}>
+          <Text
+            onPress={() => navigation.navigate('Approvals')}
+            style={[styles.approvals, styles.moreClr, styles.homeTypo]}>
             Approvals
           </Text>
-          <Text style={[styles.more, styles.moreClr, styles.homeTypo]}>
+          <Text
+            onPress={() => navigation.navigate('More')}
+            style={[styles.more, styles.moreClr, styles.homeTypo]}>
             More
           </Text>
           <Pressable onPress={() => navigation.navigate('Home')}>
@@ -474,7 +478,7 @@ const styles = StyleSheet.create({
   },
   rectangleView: {
     height: 65,
-    bottom: 50,
+    bottom: 0.5,
     left: 0,
     right: 0,
   },

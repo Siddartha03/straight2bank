@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
   },
   groupParent: {
     top: 231,
-    bottom: 50,
+    bottom: 0.5,
     left: 0,
     right: 0,
     position: 'absolute',

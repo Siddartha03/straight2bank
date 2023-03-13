@@ -192,10 +192,26 @@ const IPhone14Pro10 = () => {
           />
         </View>
         <View style={[styles.accountsGroup, styles.groupShadowBox]}>
-          <Text style={[styles.accounts1, styles.moreTypo]}>Accounts</Text>
-          <Text style={[styles.transactio, styles.moreTypo]}>Transactio..</Text>
-          <Text style={[styles.approvals, styles.moreTypo]}>Approvals</Text>
-          <Text style={[styles.more, styles.moreTypo]}>More</Text>
+          <Text
+            onPress={() => navigation.navigate('Accounts')}
+            style={[styles.accounts1, styles.moreTypo]}>
+            Accounts
+          </Text>
+          <Text
+            onPress={() => navigation.navigate('Transactions')}
+            style={[styles.transactio, styles.moreTypo]}>
+            Transactio..
+          </Text>
+          <Text
+            onPress={() => navigation.navigate('Approvals')}
+            style={[styles.approvals, styles.moreTypo]}>
+            Approvals
+          </Text>
+          <Text
+            onPress={() => navigation.navigate('More')}
+            style={[styles.more, styles.moreTypo]}>
+            More
+          </Text>
           <Pressable onPress={() => navigation.navigate('Approvals')}>
             <Image
               style={[
@@ -236,7 +252,9 @@ const IPhone14Pro10 = () => {
               source={require('../assets/group-15.png')}
             />
           </Pressable>
-          <View style={[styles.homeParent, styles.iconPosition]}>
+          <Pressable
+            style={[styles.homeParent, styles.iconPosition]}
+            onPress={() => navigation.navigate('Home')}>
             <Text style={styles.home}>Home</Text>
             <Image
               style={[
@@ -247,7 +265,7 @@ const IPhone14Pro10 = () => {
               resizeMode="cover"
               source={require('../assets/home.png')}
             />
-          </View>
+          </Pressable>
         </View>
       </View>
     </View>
@@ -873,7 +891,7 @@ const styles = StyleSheet.create({
   },
   accountsGroup: {
     height: 65,
-    bottom: 50,
+    bottom: 0.5,
     left: 0,
     right: 0,
   },

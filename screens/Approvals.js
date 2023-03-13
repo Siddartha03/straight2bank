@@ -31,6 +31,7 @@ const Approvals = () => {
               <View
                 style={[styles.accountsParent, styles.groupChild1ShadowBox]}>
                 <Text
+                  onPress={() => navigation.navigate('Accounts')}
                   style={[
                     styles.accounts,
                     styles.mittuTypo,
@@ -39,17 +40,7 @@ const Approvals = () => {
                   Accounts
                 </Text>
                 <Text
-                  style={[
-                    styles.accounts,
-                    styles.mittuTypo,
-                    styles.accountsPosition,
-                  ]}>
-                  Accounts
-                </Text>
-                <Text style={[styles.moreTypo, styles.accountsPosition]}>
-                  Accounts
-                </Text>
-                <Text
+                  onPress={() => navigation.navigate('Transactions')}
                   style={[
                     styles.transactio,
                     styles.moreTypo,
@@ -66,6 +57,7 @@ const Approvals = () => {
                   Approvals
                 </Text>
                 <Text
+                  onPress={() => navigation.navigate('More')}
                   style={[styles.more, styles.moreTypo, styles.morePosition]}>
                   More
                 </Text>
@@ -366,7 +358,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   accounts: {
-    color: Color.royalblue_100,
+    color: Color.black,
   },
   transactio: {
     marginLeft: -22.5,
@@ -374,7 +366,7 @@ const styles = StyleSheet.create({
   },
   approvals1: {
     marginLeft: 66.5,
-    color: Color.mediumslateblue,
+    color: Color.royalblue_100,
     left: '50%',
   },
   more: {
@@ -449,7 +441,7 @@ const styles = StyleSheet.create({
     elevation: 6,
     height: 65,
     left: 0,
-    bottom: 50,
+    bottom: 0.5,
     right: 0,
     position: 'absolute',
   },

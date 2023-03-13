@@ -46,34 +46,18 @@ const Transactions = () => {
               <View
                 style={[styles.accountsParent, styles.groupChild9ShadowBox]}>
                 <Text
+                  onPress={() => navigation.navigate('Accounts')}
                   style={[
                     styles.accounts,
                     styles.accountsTypo,
                     styles.accountsPosition,
                     styles.accountsTypo1,
-                  ]}>
-                  Accounts
-                </Text>
-                <Text
-                  style={[
-                    styles.accounts,
-                    styles.accountsTypo,
-                    styles.accountsPosition,
-                    styles.accountsTypo1,
-                  ]}>
-                  Accounts
-                </Text>
-                <Text
-                  style={[
-                    styles.accounts2,
-                    styles.moreTypo,
-                    styles.accountsTypo,
-                    styles.accountsPosition,
                   ]}>
                   Accounts
                 </Text>
                 <Text style={styles.transactio}>Transactio..</Text>
                 <Text
+                  onPress={() => navigation.navigate('Approvals')}
                   style={[
                     styles.approvals,
                     styles.moreTypo,
@@ -83,6 +67,7 @@ const Transactions = () => {
                   Approvals
                 </Text>
                 <Text
+                  onPress={() => navigation.navigate('More')}
                   style={[
                     styles.more,
                     styles.moreTypo,
@@ -149,6 +134,7 @@ const Transactions = () => {
                 />
                 <View style={[styles.homeParent, styles.bankPosition]}>
                   <Text
+                    onPress={() => navigation.navigate('Home')}
                     style={[styles.home, styles.moreTypo, styles.accountsTypo]}>
                     Home
                   </Text>
@@ -631,7 +617,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   accounts: {
-    color: Color.royalblue_100,
+    color: Color.black,
     left: '50%',
     top: '50%',
   },
@@ -641,7 +627,7 @@ const styles = StyleSheet.create({
   },
   transactio: {
     marginLeft: -22.5,
-    color: Color.mediumslateblue,
+    color: Color.royalblue_100,
     fontSize: 12,
     left: '50%',
     top: '50%',
@@ -946,7 +932,7 @@ const styles = StyleSheet.create({
   groupContainer: {
     top: 8,
     left: 0,
-    bottom: 50,
+    bottom: 0.5,
     right: 0,
     position: 'absolute',
   },

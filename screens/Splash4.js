@@ -37,7 +37,7 @@ const Splash4 = () => {
           </View>
           <Text
             style={[styles.skip, styles.skipTypo, styles.skipTypo1]}
-            onPress={() => navigation.navigate('Home')}>
+            onPress={() => navigation.navigate('IPhone14Pro9')}>
             Skip
           </Text>
           <View style={styles.stayOnTrackParent}>

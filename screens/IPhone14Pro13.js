@@ -476,7 +476,7 @@ const styles = StyleSheet.create({
       height: 2,
     },
     shadowColor: 'rgba(0, 0, 0, 0.16)',
-    bottom: 50,
+    bottom: 0.5,
     left: 0,
     right: 0,
     position: 'absolute',

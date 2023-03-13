@@ -15,7 +15,7 @@ const Splash2 = () => {
           <Text style={styles.next}>Next</Text>
         </TouchableOpacity>
         <Text
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('IPhone14Pro9')}
           style={[styles.skip, styles.skipTypo]}>
           Skip
         </Text>

@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     borderColor: '#707070',
     borderWidth: 1,
     top: 0,
-    backgroundColor: Color.white,
+    backgroundColor: '#0561c6',
   },
   groupItem: {
     backgroundColor: 'transparent',
@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   rectangleParent: {
-    width: 393,
-    height: 726,
+    width: '100%',
+    height: '100%',
   },
   iphone14Pro12: {
     flex: 1,

@@ -44,7 +44,7 @@ const Splash5 = () => {
         </View>
         <TouchableOpacity
           style={[styles.doneWrapper, styles.groupChildPosition]}
-          onPress={() => navigation.navigate('Home')}>
+          onPress={() => navigation.navigate('IPhone14Pro9')}>
           <Text style={[styles.done, styles.donePosition]}>Done</Text>
         </TouchableOpacity>
         <View style={styles.groupWrapper}>

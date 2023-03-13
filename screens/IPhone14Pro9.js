@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -9,12 +8,10 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {Input as RNKTextInput} from '@ui-kitten/components';
 import {useNavigation} from '@react-navigation/native';
 import {FontFamily, Color} from '../GlobalStyles';
 
 const IPhone14Pro9 = () => {
-  const [rectangleTextInput, setRectangleTextInput] = useState();
   const navigation = useNavigation();
 
   return (
@@ -23,7 +20,7 @@ const IPhone14Pro9 = () => {
         <View style={styles.iconIonicIosArrowForwardParent}>
           <Pressable
             style={[styles.iconIonicIosArrowForward, styles.forgotPinPosition]}
-            onPress={() => navigation.navigate('IPhone14Pro7')}>
+            onPress={() => navigation.goBack()}>
             <Image
               style={styles.icon}
               resizeMode="cover"

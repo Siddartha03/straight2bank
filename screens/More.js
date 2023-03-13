@@ -45,17 +45,24 @@ const More = () => {
               styles.rectangleViewShadowBox,
               styles.groupItemPosition,
             ]}>
-            <Text style={[styles.home, styles.homeTypo, styles.homeTypo1]}>
+            <Text
+              onPress={() => navigation.navigate('Home')}
+              style={[styles.home, styles.homeTypo, styles.homeTypo1]}>
               Home
             </Text>
-            <Text style={[styles.accounts, styles.homeTypo, styles.homeTypo1]}>
+            <Text
+              onPress={() => navigation.navigate('Accounts')}
+              style={[styles.accounts, styles.homeTypo, styles.homeTypo1]}>
               Accounts
             </Text>
             <Text
+              onPress={() => navigation.navigate('Transactions')}
               style={[styles.transactio, styles.homeTypo, styles.homeTypo1]}>
               Transactio..
             </Text>
-            <Text style={[styles.approvals, styles.homeTypo, styles.homeTypo1]}>
+            <Text
+              onPress={() => navigation.navigate('Approvals')}
+              style={[styles.approvals, styles.homeTypo, styles.homeTypo1]}>
               Approvals
             </Text>
             <Text style={[styles.more1, styles.homeTypo1, styles.more1Typo]}>
@@ -212,7 +219,7 @@ const styles = StyleSheet.create({
   groupItemPosition: {
     backgroundColor: Color.white,
     left: 0,
-    bottom: 50,
+    bottom: 0.5,
     right: 0,
     position: 'absolute',
   },
@@ -383,7 +390,7 @@ const styles = StyleSheet.create({
   },
   more1: {
     right: 19,
-    color: Color.mediumslateblue,
+    color: Color.royalblue_100,
     textAlign: 'left',
     fontFamily: FontFamily.mulishSemibold,
     fontWeight: '600',

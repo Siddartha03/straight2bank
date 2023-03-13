@@ -12,24 +12,24 @@ const Accounts = () => {
       <View style={styles.accountsInner}>
         <View style={styles.groupParent}>
           <View style={[styles.accountsParent, styles.parentShadowBox]}>
-            <Text style={[styles.accounts1, styles.accountsTypo]}>
-              Accounts
-            </Text>
-            <Text style={[styles.accounts1, styles.accountsTypo]}>
-              Accounts
-            </Text>
-            <Text style={[styles.accounts1, styles.accountsTypo]}>
+            <Text
+              onPress={() => navigation.navigate('Accounts')}
+              style={[styles.accounts1, styles.accountsTypo]}>
               Accounts
             </Text>
             <Text
+              onPress={() => navigation.navigate('Transactions')}
               style={[styles.transactio, styles.moreTypo, styles.morePosition]}>
               Transactio..
             </Text>
             <Text
+              onPress={() => navigation.navigate('Approvals')}
               style={[styles.approvals, styles.moreTypo, styles.morePosition]}>
               Approvals
             </Text>
-            <Text style={[styles.more, styles.moreTypo, styles.morePosition]}>
+            <Text
+              onPress={() => navigation.navigate('More')}
+              style={[styles.more, styles.moreTypo, styles.morePosition]}>
               More
             </Text>
             <Pressable
@@ -95,7 +95,11 @@ const Accounts = () => {
               />
             </View>
             <View style={[styles.homeParent, styles.iconPosition]}>
-              <Text style={[styles.home, styles.moreTypo]}>Home</Text>
+              <Text
+                onPress={() => navigation.navigate('Home')}
+                style={[styles.home, styles.moreTypo]}>
+                Home
+              </Text>
               <Pressable
                 style={styles.home1}
                 onPress={() => navigation.navigate('Home')}>
@@ -576,7 +580,7 @@ const styles = StyleSheet.create({
   },
   groupParent: {
     left: 0,
-    bottom: 50,
+    bottom: 0.5,
     right: 0,
     top: 0,
     position: 'absolute',
